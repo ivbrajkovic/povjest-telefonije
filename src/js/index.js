@@ -1,10 +1,28 @@
 import "../style/style.css";
 import "../style/swiper.min.css";
-import { cube, square } from "./math.js";
+
+import "../../node_modules/glightbox/dist/css/glightbox.min.css";
+import GLightbox from "glightbox";
 
 // Import Swiper and modules
 import { Swiper, Navigation } from "swiper/js/swiper.esm.js";
 
+// Init AOS
+AOS.init();
+
+const lightbox1 = GLightbox({
+  selector: "glightbox-1",
+  touchNavigation: true,
+  loop: true,
+  autoplayVideos: true,
+  onOpen: () => {
+    console.log("Lightbox opened");
+  },
+  beforeSlideLoad: (slide, data) => {
+    // Need to execute a script in the slide?
+    // You can do that here...
+  }
+});
 // Install modules
 Swiper.use([Navigation]);
 var mySwiper = new Swiper(".swiper-container", {
@@ -15,18 +33,13 @@ var mySwiper = new Swiper(".swiper-container", {
 });
 console.log("TCL: mySwiper", mySwiper);
 
-// square(2);
-// square(4);
+// function component() {
+//   const element = document.createElement("pre");
+//   element.innerHTML = "Hello webpack! 5 cubed is equal to " + cube(5);
+//   return element;
+// }
 
-cube(10);
-
-function component() {
-  const element = document.createElement("pre");
-  element.innerHTML = "Hello webpack! 5 cubed is equal to " + cube(5);
-  return element;
-}
-
-document.body.appendChild(component());
+// document.body.appendChild(component());
 
 // alert("Hello world from Webpack!!");
 

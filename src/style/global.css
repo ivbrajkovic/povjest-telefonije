@@ -5,7 +5,7 @@
 body {
   margin: 0;
   height: 100vh;
-  background: var(--clr-light);
+  background: var(--clr-light-4);
   color: var(--clr-body);
 
   font-family: var(--ff-secondary);
@@ -18,7 +18,8 @@ body {
 }
 
 img {
-  display: block;
+  /* display: block; */
+  height: auto;
   max-width: 100%;
 }
 
@@ -32,6 +33,10 @@ h3 {
   color: inherit;
   font-family: var(--ff-primary);
   font-weight: 400;
+}
+
+h3 {
+  text-transform: uppercase;
 }
 
 h1 {

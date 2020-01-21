@@ -13,12 +13,16 @@
   z-index: 999;
   background: rgba(var(--clr-light-2), 0.8);
   font-family: var(--ff-secondary);
+  opacity: 0;
+  animation-delay: 0.6s;
+  animation-duration: 0.8s;
 }
 
 .nav__logo {
   flex-grow: 1;
   font-size: var(--fs-h3);
   margin-left: 1rem;
+  animation-delay: 1.2s;
 }
 
 /*----------  Navigation toggle button  ----------*/

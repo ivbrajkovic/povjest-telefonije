@@ -108,11 +108,7 @@ module.exports = env => {
 
     module: {
       rules: [
-        {
-          test: /\.(html)$/,
-          exclude: /node_modules/,
-          use: ["html-loader"]
-        },
+        // JS loader
         {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
@@ -126,6 +122,29 @@ module.exports = env => {
             }
           ]
         },
+
+        // Image loader
+        {
+          test: /\.(svg|png|jpg|gif)$/i,
+          exclude: /node_modules/,
+          use: {
+            loader: "file-loader",
+            options: {
+              name: "[name].[hash].[ext]",
+              outputPath: "imgs"
+              //root: resolve(__dirname, "src")
+            }
+          }
+        },
+
+        // HTML loader
+        {
+          test: /\.(html)$/,
+          exclude: /node_modules/,
+          use: ["html-loader"]
+        },
+
+        // Style loader
         {
           test: /\.(sa|sc|c)ss$/i,
           // exclude: /node_modules/,
@@ -134,17 +153,6 @@ module.exports = env => {
             "css-loader",
             autoprefixer
           ]
-        },
-        {
-          test: /\.(svg|png|jpe?g|gif)$/i,
-          exclude: /node_modules/,
-          use: {
-            loader: "file-loader",
-            options: {
-              name: "[name].[hash].[ext]",
-              outputPath: "imgs"
-            }
-          }
         }
       ]
     },
