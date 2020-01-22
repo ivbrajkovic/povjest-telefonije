@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = env => {
   const { NODE_ENV = "development", analyze = false, devtools = "eval" } =
@@ -32,18 +33,20 @@ module.exports = env => {
    * Plugins
    */
   const plugins = [
+    // Html parser
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      filename: "./index.html",
-      minify: devMode
-        ? {}
-        : {
-            removeAttributeQuotes: true,
-            collapseWhitespace: true,
-            removeComments: true
-          }
+      filename: "./index.html"
+      // minify: devMode
+      //   ? {}
+      //   : {
+      //       removeAttributeQuotes: true,
+      //       collapseWhitespace: true,
+      //       removeComments: true
+      //     }
     })
   ];
+  // Clean dist folder
   !devMode && plugins.unshift(new CleanWebpackPlugin());
   !devMode &&
     plugins.push(
@@ -55,6 +58,9 @@ module.exports = env => {
         chunkFilename: "[id].[contenthash].css"
       })
     );
+  // Copy static assets
+  // !devMode && plugins.push(new CopyPlugin([{ from: "./src/img", to: "img" }]));
+  // Bundle analizer
   analyze && plugins.push(new BundleAnalyzerPlugin());
 
   /**
@@ -73,9 +79,6 @@ module.exports = env => {
 
     entry: {
       main: "./src/js/index.js"
-      // fa: "./src/js/fa.js",
-      // first: "./src/js/first.jsx",
-      // second: "./src/js/second.jsx"
     },
 
     output: {
@@ -123,27 +126,6 @@ module.exports = env => {
           ]
         },
 
-        // Image loader
-        {
-          test: /\.(svg|png|jpg|gif)$/i,
-          exclude: /node_modules/,
-          use: {
-            loader: "file-loader",
-            options: {
-              name: "[name].[hash].[ext]",
-              outputPath: "imgs"
-              //root: resolve(__dirname, "src")
-            }
-          }
-        },
-
-        // HTML loader
-        {
-          test: /\.(html)$/,
-          exclude: /node_modules/,
-          use: ["html-loader"]
-        },
-
         // Style loader
         {
           test: /\.(sa|sc|c)ss$/i,
@@ -153,6 +135,52 @@ module.exports = env => {
             "css-loader",
             autoprefixer
           ]
+        },
+
+        // // other stuff above.....
+        // {
+        //   test: /\.(html)$/,
+        //   exclude: /node_modules/,
+        //   use: {
+        //     loader: "html-loader",
+        //     options: {
+        //       // THIS will resolve relative URLs to reference from the app/ directory
+        //       root: resolve(__dirname, "src")
+        //     }
+        //   }
+        // },
+
+        // HTML loader
+        {
+          test: /\.(html)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "html-loader",
+            options: {
+              attrs: ["img:src", "a:href"]
+              //   // root: resolve(__dirname, "src")
+            }
+          }
+        },
+
+        // Image loader
+        {
+          test: /\.(svg|png|jpe?g|gif)$/i,
+          exclude: /node_modules/,
+          // include: resolve(__dirname, "src/img"),
+          use: {
+            loader: "file-loader",
+            options: {
+              // name: "[name].[ext]",
+              // name: "[name].[hash].[ext]",
+              // outputPath: "imgs"
+              // root: resolve(__dirname, "src")
+              name: "[name].[hash].[ext]",
+              esModule: false,
+              outputPath: "img/",
+              publicPath: "img/"
+            }
+          }
         }
       ]
     },
