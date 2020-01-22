@@ -1,37 +1,34 @@
 import "../style/style.css";
-import "../style/swiper.min.css";
-
+// import "../style/swiper.min.css";
 import "../../node_modules/glightbox/dist/css/glightbox.min.css";
+
 import GLightbox from "glightbox";
 
 // Import Swiper and modules
-import { Swiper, Navigation } from "swiper/js/swiper.esm.js";
+// import { Swiper, Navigation } from "swiper/js/swiper.esm.js";
 
 // Init AOS
-AOS.init();
+AOS.init({ offset: 150 });
 
-const lightbox1 = GLightbox({
-  selector: "glightbox-1",
-  touchNavigation: true,
-  loop: true,
-  autoplayVideos: true,
-  onOpen: () => {
-    console.log("Lightbox opened");
-  },
-  beforeSlideLoad: (slide, data) => {
-    // Need to execute a script in the slide?
-    // You can do that here...
-  }
+GLightbox({
+  selector: "glightbox-telefonija",
+  loop: true
 });
+
+GLightbox({
+  selector: "glightbox-internet",
+  loop: true
+});
+
 // Install modules
-Swiper.use([Navigation]);
-var mySwiper = new Swiper(".swiper-container", {
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  }
-});
-console.log("TCL: mySwiper", mySwiper);
+// Swiper.use([Navigation]);
+// var mySwiper = new Swiper(".swiper-container", {
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev"
+//   }
+// });
+// console.log("TCL: mySwiper", mySwiper);
 
 // function component() {
 //   const element = document.createElement("pre");

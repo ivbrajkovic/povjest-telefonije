@@ -11,8 +11,9 @@
   align-items: center;
   padding: var(--nav-padding);
   z-index: 999;
-  background: rgba(var(--clr-light-2), 0.8);
-  font-family: var(--ff-secondary);
+  background-color: rgba(var(--clr-light-2), 0.8);
+  /* font-family: var(--ff-secondary); */
+  font-family: var(--ff-primary);
   opacity: 0;
   animation-delay: 0.6s;
   animation-duration: 0.8s;
@@ -21,8 +22,10 @@
 .nav__logo {
   flex-grow: 1;
   font-size: var(--fs-h3);
-  margin-left: 1rem;
+  margin-left: 1em;
   animation-delay: 1.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.125em;
 }
 
 /*----------  Navigation toggle button  ----------*/
@@ -111,3 +114,24 @@
     display: none;
   }
 }
+
+/*=============================================
+=            Custom AOS animation            =
+=============================================*/
+
+[data-aos="nav-fade"] {
+  /* opacity: 0; */
+  /* transform: scale(1.1); */
+  padding: calc(var(--nav-padding) + 1em) var(--nav-padding);
+  transition-property: background-color, padding;
+}
+
+[data-aos="nav-fade"].aos-animate {
+  padding: var(--nav-padding);
+  /* transform: scale(1); */
+  background-color: rgba(var(--clr-light-2), 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/*=====  End of Custom AOS animation  ======*/

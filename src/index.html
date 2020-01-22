@@ -13,47 +13,89 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <title>Portfolio tutorial</title>
-    <!-- <script
-      src="https://kit.fontawesome.com/77e54a2e13.js"
-      crossorigin="anonymous"
-    ></script> -->
+    <!-- Document title -->
+    <title>Povjest telefonije</title>
   </head>
+
   <body>
+    <!-- -------------------------------------------------------------------- -->
+    <!-- Header -->
     <header>
       <!-- Navigation -->
-      <div class="nav animation-fade">
+      <div
+        class="nav animation-fade"
+        data-aos="nav-fade"
+        data-aos-anchor="#uvod"
+        data-aos-anchor-placement="top-top"
+        data-aos-offset="0"
+      >
         <div class="nav__logo animation-fade" style="animation-delay: 1s;">
-          Portfolio
+          Povjest telefonije
         </div>
         <button class="nav__toggle" aria-label="navigation toggle">
           <span class="hamburger"></span>
         </button>
         <nav class="nav__list">
           <a
-            href="#"
+            href="#hero"
             class="nav__link animation-fade"
             style="animation-delay: 1.2s;"
-            >Link 1</a
+            >Početna</a
           >
           <a
-            href="#"
+            href="#uvod"
+            class="nav__link animation-fade"
+            style="animation-delay: 1.2s;"
+            >Uvod</a
+          >
+          <a
+            href="#telefonija"
             class="nav__link animation-fade"
             style="animation-delay: 1.3s;"
-            >Link 2</a
+            >Telefonija</a
           >
-          <a
-            href="#"
+          <!-- <a
+            href="#povijest"
             class="nav__link animation-fade"
             style="animation-delay: 1.4s;"
-            >Link 3</a
+            >Povijest</a
+          >
+          <a
+            href="#povijest"
+            class="nav__link animation-fade"
+            style="animation-delay: 1.5s;"
+            >Komercijalizacija</a
+          >
+          <a
+            href="#hrvatska"
+            class="nav__link animation-fade"
+            style="animation-delay: 1.5s;"
+            >Hrvatska</a
+          >
+          <a
+            href="#modernizacija"
+            class="nav__link animation-fade"
+            style="animation-delay: 1.5s;"
+            >Modernizacija</a
+          > -->
+          <a
+            href="#internet"
+            class="nav__link animation-fade"
+            style="animation-delay: 1.5s;"
+            >Internet</a
+          >
+          <a
+            href="#zaključak"
+            class="nav__link animation-fade"
+            style="animation-delay: 1.5s;"
+            >Zaključak</a
           >
         </nav>
       </div>
       <!-- End navigation -->
 
       <!-- Hero -->
-      <div class="hero">
+      <div id="hero" class="hero">
         <section class="hero__content">
           <h1 class="hero__title animation-fade-slide-left">
             Povjest telefonije
@@ -65,6 +107,8 @@
       </div>
       <!-- End Hero -->
     </header>
+    <!-- End Header -->
+    <!-- -------------------------------------------------------------------- -->
 
     <!-- -------------------------------------------------------------------- -->
     <!-- Main -->
@@ -72,9 +116,9 @@
       <!-- -------------------------------------------------------------------- -->
       <!-- Uvod -->
       <section
+        id="uvod"
         class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
         data-aos="fade-up"
-        data-aos-anchor-placement="center-bottom"
       >
         <h2 class="mb-3 mb-md-4" data-aos="fade-up">
           Uvod
@@ -93,9 +137,9 @@
 
       <!-- Telefonija -->
       <section
+        id="telefonija"
         class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
         data-aos="fade-up"
-        data-aos-anchor-placement="center-bottom"
       >
         <h2 class="mb-3 mb-md-4" data-aos="fade-up">
           Telefonija
@@ -130,23 +174,26 @@
       <!-- -------------------------------------------------------------------- -->
 
       <!-- -------------------------------------------------------------------- -->
-      <!-- Alexander Graham Bell -->
+      <!-- Povijest -->
       <article
+        id="povijest"
         class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
         data-aos="fade-up"
       >
         <section class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row">
-          <div class="w-100 mb-4 mb-md-5">
-            <h2 data-aos="fade-up">
-              Alexander Graham Bell
-            </h2>
-          </div>
+          <h2 class="w-100 mb-4 mb-md-5" data-aos="fade-up">
+            Alexander Graham Bell
+          </h2>
           <div
             class="flex-shrink-0 mb-4 mb-md-0 order-md-1"
             data-aos="fade-up-left"
-            data-aos-anchor-placement="bottom-bottom"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
           >
-            <a href="/src/img/Alexander_Graham_Bell.jpg" class="glightbox-1">
+            <a
+              href="/src/img/Alexander_Graham_Bell.jpg"
+              class="glightbox-telefonija"
+            >
               <img src="/src/img/Alexander_Graham_Bell-tmb.jpg" alt="" />
             </a>
           </div>
@@ -174,11 +221,12 @@
           <div
             class="flex-shrink-0 mb-4 mb-md-0"
             data-aos="fade-up-right"
-            data-aos-anchor-placement="bottom-bottom"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
           >
-            <a href="/src/img/first-words.jpg" class="glightbox-1"
-              ><img src="/src/img/first-words-tmb.jpg" alt=""
-            /></a>
+            <a href="/src/img/first-words.jpg" class="glightbox-telefonija">
+              <img src="/src/img/first-words-tmb.jpg" alt="" />
+            </a>
           </div>
           <div class="ml-0 ml-md-5">
             <h3 data-aos="fade-up">Prve riječi</h3>
@@ -195,24 +243,33 @@
           </div>
         </section>
       </article>
-      <!-- End Alexander Graham Bell -->
+      <!-- Povijest -->
       <!-- -------------------------------------------------------------------- -->
 
       <!-- -------------------------------------------------------------------- -->
       <!-- Komercijalizacija -->
-      <article class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1">
-        <div class="w-100 mb-4 mb-md-5">
-          <h2>Komercijalizacija</h2>
-        </div>
+      <article
+        id="komercijalizacija"
+        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        data-aos="fade-up"
+      >
+        <h2 class="w-100 mb-4 mb-md-5" data-aos="fade-up">Komercijalizacija</h2>
 
         <!-- Prvi telefoni -->
         <section class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row">
-          <div class="mb-4 mb-md-0 flex-shrink-0 order-md-1">
-            <img src="https://via.placeholder.com/300x250" alt="" />
+          <div
+            class="mb-4 mb-md-0 flex-shrink-0 order-md-1"
+            data-aos="fade-up-left"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
+            <a href="/src/img/telephone.jpg" class="glightbox-telefonija">
+              <img src="/src/img/telephone-tmb.jpg" alt="" />
+            </a>
           </div>
           <div class="mr-0 mr-md-5 flex-1">
-            <h3>Prvi telefoni</h3>
-            <p>
+            <h3 data-aos="fade-up">Prvi telefoni</h3>
+            <p data-aos="fade-up">
               U početku su se telefoni prodavali u parovima i komunikacija je
               bila ograničena samo na taj par telefona, direktno se okretanjem
               ručice signaliziralo drugom telefona o dolaznom pozivu. To se
@@ -228,12 +285,22 @@
         <section
           class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row clr-gradient-1"
         >
-          <div class="flex-shrink-0 mb-4 mb-md-0">
-            <img src="https://via.placeholder.com/300x250" alt="" />
+          <div
+            class="flex-shrink-0 mb-4 mb-md-0"
+            data-aos="fade-up-right"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
+            <a
+              href="/src/img/telephone-exchange.jpg"
+              class="glightbox-telefonija"
+            >
+              <img src="/src/img/telephone-exchange-tmb.jpg" alt="" />
+            </a>
           </div>
           <div class="ml-0 ml-md-5 flex-1">
-            <h3>prve centrale</h3>
-            <p>
+            <h3 data-aos="fade-up">prve centrale</h3>
+            <p data-aos="fade-up">
               U početku su se telefoni prodavali u parovima i komunikacija je
               bila ograničena samo na taj par telefona, direktno se okretanjem
               ručice signaliziralo drugom telefona o dolaznom pozivu. To se
@@ -244,45 +311,48 @@
             </p>
           </div>
         </section>
-        <section class="d-flex">
-          <div class="flex-1">
-            <ul class="m-0">
-              <li>
-                George W. Coy je izgradio prvu svjetsku centralu
-              </li>
-              <li>
-                28. siječnja 1878. u New Havenu puštena je pogon
-              </li>
-              <li>
-                vrijedila je manje od četrdeset dolara
-              </li>
-              <li>
-                mogla je povezivati čak šezdeset i četiri telefona
-              </li>
-              <li>
-                istovremeno su se mogla voditi samo dva razgovora
-              </li>
-            </ul>
-          </div>
-          <div class="flex-1">
-            <ul class="m-0">
-              <li>
-                početak rada sa 21-dnim pretplatnikom
-              </li>
-              <li>
-                prva tarifa od 1,50 dolara mjesečno
-              </li>
-              <li>
-                prvi imenik sa 50-ak pretplatnika
-              </li>
-              <li>
-                Almon Strowger, 1889. dizajnirao automatsku centralu
-              </li>
-              <li>
-                1892. u mjestu La Porte puštena je u pogon
-              </li>
-            </ul>
-          </div>
+        <section class="d-flex flex-wrap" data-aos="" data-aos-offset="250">
+          <!-- Left list -->
+          <ol
+            class="m-0 flex-1 flex-basis-100 flex-basis-md-0 rectangle-list transition-fade-left"
+          >
+            <li style="transition-delay: 100ms;">
+              George W. Coy je izgradio prvu svjetsku centralu
+            </li>
+            <li style="transition-delay: 150ms;">
+              28. siječnja 1878. u New Havenu puštena je pogon
+            </li>
+            <li style="transition-delay: 200ms;">
+              vrijedila je manje od četrdeset dolara
+            </li>
+            <li style="transition-delay: 250ms;">
+              mogla je povezivati čak šezdeset i četiri telefona
+            </li>
+            <li style="transition-delay: 300ms;">
+              samo dva razgovora istovremeno
+            </li>
+          </ol>
+
+          <!-- Right list -->
+          <ol
+            class="flex-1 m-0 mt-4 mt-md-0 rectangle-list transition-fade-left"
+          >
+            <li style="transition-delay: 250ms;">
+              početak rada sa 21-dnim pretplatnikom
+            </li>
+            <li style="transition-delay: 300ms;">
+              prva tarifa od 1,50 dolara mjesečno
+            </li>
+            <li style="transition-delay: 350ms;">
+              prvi imenik sa 50-ak pretplatnika
+            </li>
+            <li style="transition-delay: 400ms;">
+              A. Strowger, 1889. napravio automatsku centralu
+            </li>
+            <li style="transition-delay: 450ms;">
+              1892. u mjestu La Porte puštena je u pogon
+            </li>
+          </ol>
         </section>
       </article>
       <!-- End Komercijalizacija -->
@@ -290,19 +360,30 @@
 
       <!-- -------------------------------------------------------------------- -->
       <!-- Telefonija u Hrvatskoj -->
-      <article class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1">
-        <div class="w-100 mb-4 mb-md-5">
-          <h2>Telefonija u Hrvatskoj</h2>
-        </div>
+      <article
+        id="hrvatska"
+        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        data-aos="fade-up"
+      >
+        <h2 class="w-100 mb-4 mb-md-5" data-aos="fade-up">
+          Telefonija u Hrvatskoj
+        </h2>
 
         <!-- Prva telefonska linija -->
         <section class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row">
-          <div class="mb-4 mb-md-0 flex-shrink-0 order-md-1">
-            <img src="https://via.placeholder.com/300x250" alt="" />
+          <div
+            class="mb-4 mb-md-0 flex-shrink-0 order-md-1"
+            data-aos="fade-up-left"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
+            <a href="/src/img/centrala.jpg" class="glightbox-telefonija">
+              <img src="/src/img/centrala-tmb.jpg" alt="" />
+            </a>
           </div>
           <div class="mr-0 mr-md-5 flex-1">
-            <h3>Prva telefonska linija</h3>
-            <p>
+            <h3 data-aos="fade-up">Prva telefonska linija</h3>
+            <p data-aos="fade-up">
               U Hrvatskoj je prva lokalna telefonska linija proradila u Zagrebu
               1881., a povezivala je Građevinski ured Gradskoga poglavarstva i
               vodovodnu strojarnicu, u duljini od 3,5 km. Prva telefonska
@@ -311,14 +392,13 @@
               1889. i u Rijeci. Te je godine u Zagrebu bila stavljena u funkciju
               i prva javna telefonska govornica.
             </p>
-            <p></p>
           </div>
         </section>
 
         <!-- Prva automatska centrala u Hrvatskoj-->
         <div class="w-100 mb-4 mb-md-5 order-md-2">
-          <h3>Prva automatska centrala</h3>
-          <p>
+          <h3 data-aos="fade-up">Prva automatska centrala</h3>
+          <p data-aos="fade-up">
             U Zagrebu 1928. puštena je u promet prva
             <a
               href="https://en.wikipedia.org/wiki/Telephone_exchange#Early_automatic_exchanges"
@@ -350,12 +430,19 @@
 
         <!-- Prvi optički kabel u Hrvatskoj-->
         <section class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row">
-          <div class="mb-4 mb-md-0 flex-shrink-0">
-            <img src="https://via.placeholder.com/300x250" alt="" />
+          <div
+            class="mb-4 mb-md-0 flex-shrink-0"
+            data-aos="fade-up-right"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
+            <a href="/src/img/fiber-optic.jpg" class="glightbox-telefonija">
+              <img src="/src/img/fiber-optic-tmb.jpg" alt="" />
+            </a>
           </div>
           <div class="ml-0 ml-md-5 flex-1">
-            <h3>Prvi optički kabel u hrvatskoj</h3>
-            <p>
+            <h3 data-aos="fade-up">Prvi optički kabel u hrvatskoj</h3>
+            <p data-aos="fade-up">
               Prvi
               <a
                 href="https://en.wikipedia.org/wiki/Optical_fiber"
@@ -371,12 +458,19 @@
 
         <!-- Prva mobilna mreža u Hrvatskoj -->
         <section class="d-flex flex-wrap flex-column flex-md-row">
-          <div class="mb-4 mb-md-0 flex-shrink-0 order-md-last">
-            <img src="https://via.placeholder.com/300x250" alt="" />
+          <div
+            class="mb-4 mb-md-0 flex-shrink-0 order-md-last"
+            data-aos="fade-up-left"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
+            <a href="/src/img/mobile.jpg" class="glightbox-telefonija">
+              <img src="/src/img/mobile-tmb.jpg" alt="" />
+            </a>
           </div>
           <div class="mr-0 mr-md-5 flex-1">
-            <h3>Prvi mobilna mreža u hrvatskoj</h3>
-            <p>
+            <h3 data-aos="fade-up">Prvi mobilna mreža u hrvatskoj</h3>
+            <p data-aos="fade-up">
               U siječnju 1991. započela je raditi prva pokretna telefonska mreža
               nazvana
               <a
@@ -403,19 +497,30 @@
 
       <!-- -------------------------------------------------------------------- -->
       <!-- Modernizacija  -->
-      <article class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1">
-        <div class="w-100 mb-4 mb-md-5">
-          <h2>Modernizacija</h2>
-        </div>
+      <article
+        id="modernizacija"
+        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        data-aos="fade-up"
+      >
+        <h2 class="w-100 mb-4 mb-md-5" data-aos="fade-up">
+          Modernizacija
+        </h2>
 
         <!-- Prvi modemi -->
         <section class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row">
-          <div class="mb-4 mb-md-0 flex-shrink-0">
-            <img src="https://via.placeholder.com/300x250" alt="" />
+          <div
+            class="mb-4 mb-md-0 flex-shrink-0"
+            data-aos="fade-up-right"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
+            <a href="/src/img/oldmodem.jpg" class="glightbox-telefonija">
+              <img src="/src/img/oldmodem-tmb.jpg" alt="" />
+            </a>
           </div>
           <div class="ml-0 ml-md-5 flex-1">
-            <h3>Prva modemi</h3>
-            <p>
+            <h3 data-aos="fade-up">Prvi modemi</h3>
+            <p data-aos="fade-up">
               Razvojem telefonije došlo je i do potrebe za razmjenom podataka.
               Tu razmjenu podataka omogućio je modem (<a
                 href="https://en.wikipedia.org/wiki/Modem"
@@ -431,18 +536,24 @@
               tehnologija, koji je imao brzine do 128Kbps. Ovo je početak
               digitalizacije za korisnike.
             </p>
-            <p></p>
           </div>
         </section>
 
         <!-- Prva pokretna telefonija -->
         <section class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row">
-          <div class="mb-4 mb-md-0 flex-shrink-0 order-md-1">
-            <img src="https://via.placeholder.com/300x250" alt="" />
+          <div
+            class="mb-4 mb-md-0 flex-shrink-0 order-md-1"
+            data-aos="fade-up-left"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
+            <a href="/src/img/mnt.png" class="glightbox-telefonija">
+              <img src="/src/img/mnt-tmb.jpg" alt="" />
+            </a>
           </div>
           <div class="mr-0 mr-md-5 flex-1">
-            <h3>Pokretna telefonija</h3>
-            <p>
+            <h3 data-aos="fade-up">Pokretna telefonija</h3>
+            <p data-aos="fade-up">
               U Švedskoj i Norveškoj 1981 godine otvara se sustav nordijskog
               mobilnog telefona (<a
                 href="https://en.wikipedia.org/wiki/Nordic_Mobile_Telephone"
@@ -459,18 +570,29 @@
               u SAD-u. Košta je 4000 USD, što je današnji ekvivalent od 10000
               USD.
             </p>
-            <p></p>
+            <p data-aos="fade-up">
+              Prva NMT mreža je u Hrvatsku stigla 1987 godine., koju je pokrenuo
+              tadašnji
+              <a href="https://www.posta.hr/povijest-35/35" target="_blank">PTT</a>, čiji je nasljednik
+              <a href="https://www.hrvatskitelekom.hr/" target="_blank">Hrvatski Telekom</a>. Mreža je u Hrvatskoj ugašena 2005
+              godine.
+            </p>
           </div>
         </section>
 
         <!-- Prva pokretna telefonija u Hrvatskoj-->
-        <section class="d-flex flex-wrap flex-column flex-md-row">
-          <div class="mb-4 mb-md-0 flex-shrink-0">
+        <!-- <section class="d-flex flex-wrap flex-column flex-md-row">
+          <div
+            class="mb-4 mb-md-0 flex-shrink-0"
+            data-aos="fade-up-right"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
             <img src="https://via.placeholder.com/300x250" alt="" />
           </div>
           <div class="ml-0 ml-md-5 flex-1">
-            <h3>NMT u Hrvatskoj</h3>
-            <p>
+            <h3 data-aos="fade-up">NMT u Hrvatskoj</h3>
+            <p data-aos="fade-up">
               Prva NMT mreža je u Hrvatsku stigla 1987 godine., koju je pokrenuo
               tadašnji
               <a href="https://www.posta.hr/povijest-35/35" target="_blank"
@@ -480,28 +602,38 @@
                 >Hrvatski Telekom</a
               >. Mreža je u Hrvatskoj ugašena 2005 godine.
             </p>
-            <p></p>
           </div>
+          -->
         </section>
-      </article>
+      </article> 
       <!-- End Modernizacija  -->
       <!-- -------------------------------------------------------------------- -->
 
       <!-- -------------------------------------------------------------------- -->
       <!-- Internet  -->
-      <article class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1">
-        <div class="w-100 mb-4 mb-md-5">
-          <h2>Internet</h2>
-        </div>
+      <article
+        id="internet"
+        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        data-aos="fade-up"
+      >
+        <h2 class="w-100 mb-4 mb-md-5" data-aos="fade-up">Internet</h2>
 
         <!-- Globalna mreža -->
         <section class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row">
-          <div class="mb-4 mb-md-0 flex-shrink-0">
-            <img src="https://via.placeholder.com/300x250" alt="" />
+          <div
+            class="mb-4 mb-md-0 flex-shrink-0"
+            class="mb-4 mb-md-0 flex-shrink-0"
+            data-aos="fade-up-left"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
+            <a href="/src/img/internet.jpg" class="glightbox-telefonija">
+              <img src="/src/img/internet-tmb.jpg" alt="" />
+            </a>
           </div>
           <div class="mr-0 mr-md-5 flex-1 order-md-first">
-            <h3>Globalna mreža</h3>
-            <p>
+            <h3 data-aos="fade-up">Globalna mreža</h3>
+            <p data-aos="fade-up">
               Javno dostupna podatkovna mreža koja povezuje računala i računalne
               mreže diljem svijeta pomoću
               <a
@@ -525,18 +657,27 @@
               opsega, povezanih širokim nizom tehnologija elektroničkih,
               bežičnih i optičkih umrežavanja.
             </p>
-            <p></p>
           </div>
         </section>
 
         <!-- Prva svjetska mreža -->
-        <section class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row">
-          <div class="mb-4 mb-md-0 flex-shrink-0">
-            <img src="https://via.placeholder.com/300x250" alt="" />
+        <section
+          class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row"
+          data-aos="fade-up"
+        >
+          <div
+            class="mb-4 mb-md-0 flex-shrink-0"
+            data-aos="fade-up-right"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
+            <a href="/src/img/www.jpg" class="glightbox-telefonija">
+              <img src="/src/img/www.jpg" alt="" />
+            </a>
           </div>
           <div class="ml-0 ml-md-5 flex-1">
-            <h3>Prva svjetska mreža</h3>
-            <p>
+            <h3 data-aos="fade-up">Prva svjetska mreža</h3>
+            <p data-aos="fade-up">
               Povezivanjem dvaju računala smještenih na različitim američkim
               sveučilištima (sporom)
               <a
@@ -552,18 +693,27 @@
               >
               (WAN, engl. Wide Area Network).
             </p>
-            <p></p>
           </div>
         </section>
 
         <!-- ARPANET -->
-        <section class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row">
-          <div class="mb-4 mb-md-0 flex-shrink-0">
-            <img src="https://via.placeholder.com/300x250" alt="" />
+        <section
+          class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row"
+          data-aos="fade-up"
+        >
+          <div
+            class="mb-4 mb-md-0 flex-shrink-0"
+            data-aos="fade-up-left"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
+            <a href="/src/img/arpanet.jpg" class="glightbox-telefonija">
+              <img src="/src/img/arpanet-tmb.jpg" alt="" />
+            </a>
           </div>
           <div class="mr-0 mr-md-5 flex-1 order-md-first">
-            <h3>ARPANET</h3>
-            <p>
+            <h3 data-aos="fade-up">ARPANET</h3>
+            <p data-aos="fade-up">
               1969. godine znanstveno-istraživački tim ARPA-e (engl. Advanced
               Research Projects Agency) započeo je izgradnju prve računalne
               mreže pod nazivom
@@ -587,18 +737,24 @@
               >. ARPANET-ovi protokoli nisu dovoljno dobri za uporabu ako se
               koristi veliki broj mreža.
             </p>
-            <p></p>
           </div>
         </section>
 
         <!-- Kontrola prijenosa -->
         <section class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row">
-          <div class="mb-4 mb-md-0 flex-shrink-0">
-            <img src="https://via.placeholder.com/300x250" alt="" />
+          <div
+            class="mb-4 mb-md-0 flex-shrink-0"
+            data-aos="fade-up-right"
+            data-aos-anchor-placement="center-bottom"
+            data-aos-offset="100"
+          >
+            <a href="/src/img/tcp.jpg" class="glightbox-telefonija">
+              <img src="/src/img/tcp-tmb.jpg" alt="" />
+            </a>
           </div>
           <div class="ml-0 ml-md-5 flex-1">
-            <h3>Kontrola prijenosa</h3>
-            <p>
+            <h3 data-aos="fade-up">Kontrola prijenosa</h3>
+            <p data-aos="fade-up">
               <a
                 href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol"
                 target="_blank"
@@ -613,7 +769,6 @@
               na dvije vrste protokola: TCP i IP (engl. Internet Protocol) koji
               se i danas koriste za komunikaciju između umreženih računala
             </p>
-            <p></p>
           </div>
         </section>
       </article>
@@ -622,9 +777,13 @@
 
       <!-- -------------------------------------------------------------------- -->
       <!-- Zaključak  -->
-      <section class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1">
-        <h2 class="mb-3 mb-md-4">Zaključak</h2>
-        <p>
+      <section
+        id="zaključak"
+        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        data-aos="fade-up"
+      >
+        <h2 class="mb-3 mb-md-4" data-aos="fade-up">Zaključak</h2>
+        <p data-aos="fade-up">
           Čovjekova želja za komunikacijom i informacijom (informacija je moć)
           dovela je do izuma telefona čime je započela jedna nova tehnološka
           era, koju možemo nazvati i telekomunikacijsko doba u kojem i sada
@@ -635,43 +794,10 @@
       </section>
       <!-- End Zaključak  -->
       <!-- -------------------------------------------------------------------- -->
-
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </main>
 
-    <i class="fas fa-check-circle fa-3x"></i>
-    <i class="fas fa-adjust"></i>
-
-    <!-- Slider main container -->
-    <div class="swiper-container">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <div class="content-center"><h2>Slide 1</h2></div>
-        </div>
-        <div class="swiper-slide">
-          <div class="content-center"><h2>Slide 2</h2></div>
-        </div>
-        <div class="swiper-slide">
-          <div class="content-center"><h2>Slide 3</h2></div>
-        </div>
-        ...
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <!-- <div class="swiper-scrollbar"></div> -->
-    </div>
+    <!-- <i class="fas fa-check-circle fa-3x"></i>
+    <i class="fas fa-adjust"></i> -->
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>

@@ -26,3 +26,31 @@
 .flex-1 {
   flex: 1 1 0%;
 }
+
+/* .flex-w-25 {
+  flex-basis: 25%;
+}
+.flex-w-50 {
+  flex-basis: 50%;
+}
+.flex-w-75 {
+  flex-basis: 75%;
+}
+.flex-w-75 {
+  flex-basis: 75%;
+}
+
+@media only screen and (min-width: 600px) {
+  .flex-w-25 {
+    flex-basis: 25%;
+  }
+  .flex-w-50 {
+    flex-basis: 50%;
+  }
+  .flex-w-75 {
+    flex-basis: 75%;
+  }
+  .flex-w-75 {
+    flex-basis: 75%;
+  }
+} */

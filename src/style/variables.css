@@ -27,6 +27,10 @@
   --clr-gradient-body: linear-gradient(to right, #e6e7ec, #e6e7ec, #dcdde2);
   --clr-gradient-1: linear-gradient(to right, #f1f1f1, #f1f7fc, #f1f1f1);
 
+  --shadow-key-umbra-opacity: 0.2;
+  --shadow-key-penumbra-opacity: 0.14;
+  --shadow-ambient-shadow-opacity: 0.12;
+
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
