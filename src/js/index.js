@@ -2,17 +2,34 @@ import "../style/style.css";
 // import "../style/swiper.min.css";
 import "../../node_modules/glightbox/dist/css/glightbox.min.css";
 
+import smoothscroll from "smoothscroll-polyfill";
+
+// kick off the polyfill!
+smoothscroll.polyfill();
+
 import GLightbox from "glightbox";
 
 // Import Swiper and modules
 // import { Swiper, Navigation } from "swiper/js/swiper.esm.js";
 
-// Init AOS
-AOS.init({ offset: 150 });
+// window.onload = event => {
+//   !window.location.hash && (window.location.hash = "#hero");
+// };
 
 GLightbox({
   selector: "glightbox-telefonija",
   loop: true
+});
+
+// Init AOS
+// AOS.init({ offset: 150 });
+AOS.init();
+
+document.addEventListener("aos:in", ({ detail }) => {
+  detail.id && console.log(detail, "IN");
+});
+document.addEventListener("aos:out", ({ detail }) => {
+  detail.id && console.log(detail, "OUT");
 });
 
 GLightbox({

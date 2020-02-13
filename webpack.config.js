@@ -78,7 +78,8 @@ module.exports = env => {
     mode: devMode ? "development" : "production",
 
     entry: {
-      main: "./src/js/index.js"
+      main: "./src/js/index.js",
+      fa: "./src/js/fa.js"
     },
 
     output: {
@@ -176,6 +177,8 @@ module.exports = env => {
               // outputPath: "imgs"
               // root: resolve(__dirname, "src")
               name: "[name].[hash].[ext]",
+
+              // ! Important for html template assets
               esModule: false,
               outputPath: "img/",
               publicPath: "img/"

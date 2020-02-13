@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <!-- Fonts -->
@@ -11,7 +12,8 @@
     />
 
     <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Document title -->
     <title>Povjest telefonije</title>
@@ -24,12 +26,12 @@
       <!-- Navigation -->
       <div
         class="nav animation-fade"
-        data-aos="nav-fade"
+        data-aos="nav-fade-shrink"
         data-aos-anchor="#uvod"
         data-aos-anchor-placement="top-top"
-        data-aos-offset="0"
+        data-aos-offset="-150"
       >
-        <div class="nav__logo animation-fade" style="animation-delay: 1s;">
+        <div class="nav__logo nav-fade" style="animation-delay: 1s;">
           Povjest telefonije
         </div>
         <button class="nav__toggle" aria-label="navigation toggle">
@@ -38,55 +40,55 @@
         <nav class="nav__list">
           <a
             href="#hero"
-            class="nav__link animation-fade"
+            class="nav__link nav-fade"
             style="animation-delay: 1.2s;"
             >Početna</a
           >
           <a
             href="#uvod"
-            class="nav__link animation-fade"
+            class="nav__link nav-fade"
             style="animation-delay: 1.2s;"
             >Uvod</a
           >
           <a
             href="#telefonija"
-            class="nav__link animation-fade"
+            class="nav__link nav-fade"
             style="animation-delay: 1.3s;"
             >Telefonija</a
           >
           <!-- <a
             href="#povijest"
-            class="nav__link animation-fade"
+            class="nav__link nav-fade"
             style="animation-delay: 1.4s;"
             >Povijest</a
           >
           <a
             href="#povijest"
-            class="nav__link animation-fade"
+            class="nav__link nav-fade"
             style="animation-delay: 1.5s;"
             >Komercijalizacija</a
           >
           <a
             href="#hrvatska"
-            class="nav__link animation-fade"
+            class="nav__link nav-fade"
             style="animation-delay: 1.5s;"
             >Hrvatska</a
           >
           <a
             href="#modernizacija"
-            class="nav__link animation-fade"
+            class="nav__link nav-fade"
             style="animation-delay: 1.5s;"
             >Modernizacija</a
           > -->
           <a
             href="#internet"
-            class="nav__link animation-fade"
+            class="nav__link nav-fade"
             style="animation-delay: 1.5s;"
             >Internet</a
           >
           <a
             href="#zaključak"
-            class="nav__link animation-fade"
+            class="nav__link nav-fade"
             style="animation-delay: 1.5s;"
             >Zaključak</a
           >
@@ -97,10 +99,10 @@
       <!-- Hero -->
       <div id="hero" class="hero">
         <section class="hero__content">
-          <h1 class="hero__title animation-fade-slide-left">
+          <h1 class="hero__title animation-fade-left">
             Povjest telefonije
           </h1>
-          <h3 class="hero__subtitle animation-fade-slide-left">
+          <h3 class="hero__subtitle animation-fade-left">
             Seminarski rad
           </h3>
         </section>
@@ -115,9 +117,9 @@
     <main class="container text-center text-md-left">
       <!-- -------------------------------------------------------------------- -->
       <!-- Uvod -->
+      <div id="uvod" class="anchor"></div>
       <section
-        id="uvod"
-        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        class="mb-4 mb-md-5 p-4 p-md-5 back-gradient-1"
         data-aos="fade-up"
       >
         <h2 class="mb-3 mb-md-4" data-aos="fade-up">
@@ -136,9 +138,9 @@
       </section>
 
       <!-- Telefonija -->
+      <div id="telefonija" class="anchor"></div>
       <section
-        id="telefonija"
-        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        class="mb-4 mb-md-5 p-4 p-md-5 back-gradient-1"
         data-aos="fade-up"
       >
         <h2 class="mb-3 mb-md-4" data-aos="fade-up">
@@ -176,8 +178,7 @@
       <!-- -------------------------------------------------------------------- -->
       <!-- Povijest -->
       <article
-        id="povijest"
-        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        class="mb-4 mb-md-5 p-4 p-md-5 back-gradient-1"
         data-aos="fade-up"
       >
         <section class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row">
@@ -217,7 +218,7 @@
         </section>
 
         <!-- Prve riječi -->
-        <section class="d-flex flex-column flex-md-row clr-gradient-1">
+        <section class="d-flex flex-column flex-md-row back-gradient-1">
           <div
             class="flex-shrink-0 mb-4 mb-md-0"
             data-aos="fade-up-right"
@@ -249,8 +250,7 @@
       <!-- -------------------------------------------------------------------- -->
       <!-- Komercijalizacija -->
       <article
-        id="komercijalizacija"
-        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        class="mb-4 mb-md-5 p-4 p-md-5 back-gradient-1"
         data-aos="fade-up"
       >
         <h2 class="w-100 mb-4 mb-md-5" data-aos="fade-up">Komercijalizacija</h2>
@@ -283,7 +283,7 @@
 
         <!-- Prve centrale -->
         <section
-          class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row clr-gradient-1"
+          class="mb-4 mb-md-5 d-flex flex-wrap flex-column flex-md-row back-gradient-1"
         >
           <div
             class="flex-shrink-0 mb-4 mb-md-0"
@@ -291,10 +291,7 @@
             data-aos-anchor-placement="center-bottom"
             data-aos-offset="100"
           >
-            <a
-              href="img/telephone-exchange.jpg"
-              class="glightbox-telefonija"
-            >
+            <a href="img/telephone-exchange.jpg" class="glightbox-telefonija">
               <img src="img/telephone-exchange-tmb.jpg" alt="" />
             </a>
           </div>
@@ -361,8 +358,7 @@
       <!-- -------------------------------------------------------------------- -->
       <!-- Telefonija u Hrvatskoj -->
       <article
-        id="hrvatska"
-        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        class="mb-4 mb-md-5 p-4 p-md-5 back-gradient-1"
         data-aos="fade-up"
       >
         <h2 class="w-100 mb-4 mb-md-5" data-aos="fade-up">
@@ -498,8 +494,7 @@
       <!-- -------------------------------------------------------------------- -->
       <!-- Modernizacija  -->
       <article
-        id="modernizacija"
-        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        class="mb-4 mb-md-5 p-4 p-md-5 back-gradient-1"
         data-aos="fade-up"
       >
         <h2 class="w-100 mb-4 mb-md-5" data-aos="fade-up">
@@ -573,9 +568,12 @@
             <p data-aos="fade-up">
               Prva NMT mreža je u Hrvatsku stigla 1987 godine., koju je pokrenuo
               tadašnji
-              <a href="https://www.posta.hr/povijest-35/35" target="_blank">PTT</a>, čiji je nasljednik
-              <a href="https://www.hrvatskitelekom.hr/" target="_blank">Hrvatski Telekom</a>. Mreža je u Hrvatskoj ugašena 2005
-              godine.
+              <a href="https://www.posta.hr/povijest-35/35" target="_blank"
+                >PTT</a
+              >, čiji je nasljednik
+              <a href="https://www.hrvatskitelekom.hr/" target="_blank"
+                >Hrvatski Telekom</a
+              >. Mreža je u Hrvatskoj ugašena 2005 godine.
             </p>
           </div>
         </section>
@@ -603,17 +601,17 @@
               >. Mreža je u Hrvatskoj ugašena 2005 godine.
             </p>
           </div>
-          -->
         </section>
-      </article> 
+          -->
+      </article>
       <!-- End Modernizacija  -->
       <!-- -------------------------------------------------------------------- -->
 
       <!-- -------------------------------------------------------------------- -->
       <!-- Internet  -->
+      <div id="internet" class="anchor"></div>
       <article
-        id="internet"
-        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        class="mb-4 mb-md-5 p-4 p-md-5 back-gradient-1"
         data-aos="fade-up"
       >
         <h2 class="w-100 mb-4 mb-md-5" data-aos="fade-up">Internet</h2>
@@ -627,7 +625,7 @@
             data-aos-anchor-placement="center-bottom"
             data-aos-offset="100"
           >
-            <a href="img/internet.jpg" class="glightbox-telefonija">
+            <a href="img/internet.jpg" class="glightbox-internet">
               <img src="img/internet-tmb.jpg" alt="" />
             </a>
           </div>
@@ -671,7 +669,7 @@
             data-aos-anchor-placement="center-bottom"
             data-aos-offset="100"
           >
-            <a href="img/www.jpg" class="glightbox-telefonija">
+            <a href="img/www.jpg" class="glightbox-internet">
               <img src="img/www.jpg" alt="" />
             </a>
           </div>
@@ -707,7 +705,7 @@
             data-aos-anchor-placement="center-bottom"
             data-aos-offset="100"
           >
-            <a href="img/arpanet.jpg" class="glightbox-telefonija">
+            <a href="img/arpanet.jpg" class="glightbox-internet">
               <img src="img/arpanet-tmb.jpg" alt="" />
             </a>
           </div>
@@ -748,7 +746,7 @@
             data-aos-anchor-placement="center-bottom"
             data-aos-offset="100"
           >
-            <a href="img/tcp.jpg" class="glightbox-telefonija">
+            <a href="img/tcp.jpg" class="glightbox-internet">
               <img src="img/tcp-tmb.jpg" alt="" />
             </a>
           </div>
@@ -777,9 +775,9 @@
 
       <!-- -------------------------------------------------------------------- -->
       <!-- Zaključak  -->
+      <div id="zaključak" class="anchor"></div>
       <section
-        id="zaključak"
-        class="mb-4 mb-md-5 p-4 p-md-5 clr-gradient-1"
+        class="mb-4 mb-md-5 p-4 p-md-5 back-gradient-1"
         data-aos="fade-up"
       >
         <h2 class="mb-3 mb-md-4" data-aos="fade-up">Zaključak</h2>
@@ -791,14 +789,50 @@
           informacije do današnjih dana, kad se putem Interneta razmjenjuju
           ogromne količine podatka.
         </p>
+        <p data-aos="fade-up">
+          Danas živimo u dobu kad postoji tako velika razmjena informacija i
+          podataka, da se i razvila zasebna znanstvena grana koja se zove Data
+          Science, koja se bavi samo obradom podataka.
+        </p>
+        <p data-aos="fade-up">
+          Teško je predvidjeti u kojem pravcu se još telefoni mogu razvijati,
+          ali neka od mogućih poboljšanja u budućnosti telefona mogu biti
+          hologramske funkcije koje bi omogućile interakciju s virtualnim
+          zaslonom, također fleksibilni okviri mobitela, koji se mogu
+          prilagoditi okolini i broje druge slične inovacije.
+        </p>
       </section>
       <!-- End Zaključak  -->
       <!-- -------------------------------------------------------------------- -->
     </main>
+    <!-- End Main -->
+    <!-- -------------------------------------------------------------------- -->
 
-    <!-- <i class="fas fa-check-circle fa-3x"></i>
-    <i class="fas fa-adjust"></i> -->
+    <!-- -------------------------------------------------------------------- -->
+    <!-- Footer -->
+    <footer class="footer d-flex text-center back-gradient-1">
+      <div class="py-4 py-md-5 mx-auto">
+        <h3 class="mb-3 text-capitalize">Ivan Brajković</h3>
+        <div class="social-media">
+          <a href="mailto:ivan.brajkovic@icloud.com" target="_blank"
+            ><i class="far fa-envelope fa-lg mx-2"></i
+          ></a>
+          <a href="https://github.com/ivbrajkovic/" target="_blank"
+            ><i class="fab fa-github fa-lg mx-2"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ivan-brajkovi%C4%87-5b9883143/"
+            target="_blank"
+            ><i class="fab fa-linkedin-in fa-lg mx-2"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!-- -------------------------------------------------------------------- -->
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- AOS -->
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </body>
 </html>

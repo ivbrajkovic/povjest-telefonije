@@ -2,6 +2,11 @@
 =            Navigation block            =
 =============================================*/
 
+/* ! because of links events */
+.nav[data-aos] {
+  pointer-events: auto;
+}
+
 .nav {
   width: 100%;
   position: fixed;
@@ -73,6 +78,8 @@
   bottom: 6px;
 }
 
+/*----------  Navigation links  ----------*/
+
 .nav__list {
   margin: 0;
   flex-grow: 1;
@@ -80,8 +87,6 @@
   justify-content: space-around;
   list-style: none;
 }
-
-/*----------  Navigation links  ----------*/
 
 .nav__item {
   margin-right: 2em;
@@ -110,23 +115,28 @@
   .nav__toggle {
     display: initial;
   }
+
   .nav__list {
     display: none;
   }
 }
 
+/*=====  End of Media query  ======*/
+
 /*=============================================
-=            Custom AOS animation            =
+=            Animations            =
 =============================================*/
 
-[data-aos="nav-fade"] {
+/*----------  Custom AOS animation  ----------*/
+
+[data-aos="nav-fade-shrink"] {
   /* opacity: 0; */
   /* transform: scale(1.1); */
   padding: calc(var(--nav-padding) + 1em) var(--nav-padding);
   transition-property: background-color, padding;
 }
 
-[data-aos="nav-fade"].aos-animate {
+[data-aos="nav-fade-shrink"].aos-animate {
   padding: var(--nav-padding);
   /* transform: scale(1); */
   background-color: rgba(var(--clr-light-2), 1);
@@ -134,4 +144,4 @@
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-/*=====  End of Custom AOS animation  ======*/
+/*=====  End of Animations  ======*/

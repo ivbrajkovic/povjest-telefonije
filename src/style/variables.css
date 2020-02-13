@@ -25,7 +25,7 @@
   --clr-accent: #16e0bd;
 
   --clr-gradient-body: linear-gradient(to right, #e6e7ec, #e6e7ec, #dcdde2);
-  --clr-gradient-1: linear-gradient(to right, #f1f1f1, #f1f7fc, #f1f1f1);
+  --back-gradient-1: linear-gradient(to right, #f1f1f1, #f1f7fc, #f1f1f1);
 
   --shadow-key-umbra-opacity: 0.2;
   --shadow-key-penumbra-opacity: 0.14;
