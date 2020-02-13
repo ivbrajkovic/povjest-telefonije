@@ -65,3 +65,21 @@
 }
 
 /*=====  End of Header  ======*/
+
+/*----------  Media query  ----------*/
+
+@media only screen and (max-width: 40em) {
+  .hero {
+    height: 90vh;
+  }
+  .hero__content {
+    margin: 0 1rem;
+    text-align: right;
+  }
+  .hero__title {
+    font-size: 2.4rem;
+  }
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+}
